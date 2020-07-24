@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E762134-A405-46A5-A59D-4DCBFE7082D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StreamCompanionHorror</RootNamespace>
+    <AssemblyName>StreamCompanionHorror</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CollectionManager, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CollectionManager.1.0.6\lib\net471\CollectionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Jace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jace.1.0.0\lib\netstandard1.6\Jace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.5.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="StreamCompanionTypes, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StreamCompanionTypes.4.0.1\lib\net471\StreamCompanionTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.6.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.6.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HorrorConfiguration.cs" />
+    <Compile Include="Horrors\Audio\Scream7Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream6Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream5Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream4Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream3Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream2Horror.cs" />
+    <Compile Include="Horrors\Audio\Scream1Horror.cs" />
+    <Compile Include="Horrors\Audio\DunHorror.cs" />
+    <Compile Include="Horrors\Audio\InceptionHorror.cs" />
+    <Compile Include="Horrors\Special\SpeechHorror.cs" />
+    <Compile Include="Horrors\Special\ScreenCrackHorror.cs" />
+    <Compile Include="Horrors\Special\BluescreenHorror.cs" />
+    <Compile Include="Horrors\Visual\SpookyBTMCHorror.cs" />
+    <Compile Include="Horrors\Visual\BTMCHorror.cs" />
+    <Compile Include="Horrors\Visual\ZalliusHorror.cs" />
+    <Compile Include="Horrors\Visual\TaserfaceHorror.cs" />
+    <Compile Include="Horrors\Visual\ScaryFaceHorror.cs" />
+    <Compile Include="Horrors\Visual\ScaryLittleGirlHorror.cs" />
+    <Compile Include="Horrors\Visual\MomoHorror.cs" />
+    <Compile Include="Horrors\Visual\NalianHorror.cs" />
+    <Compile Include="Horrors\Visual\OsuClickHorror.cs" />
+    <Compile Include="Horrors\Audio\NopeHorror.cs" />
+    <Compile Include="Horrors\Visual\NaliratHorror.cs" />
+    <Compile Include="Horrors\Visual\DrPhilHorror.cs" />
+    <Compile Include="Horrors\Visual\TheManWithNoEyesHorror.cs" />
+    <Compile Include="Horrors\Visual\SteveHorror.cs" />
+    <Compile Include="Horrors\Audio\SadTromboneHorror.cs" />
+    <Compile Include="Horrors\Audio\MGSHorror.cs" />
+    <Compile Include="Horrors\Audio\DunDunDunHorror.cs" />
+    <Compile Include="Horrors\HorrorType.cs" />
+    <Compile Include="Horrors\IHorror.cs" />
+    <Compile Include="Horrors\Audio\LaughHorror.cs" />
+    <Compile Include="Horrors\Audio\KnockHorror.cs" />
+    <Compile Include="Horrors\Visual\DontForgetHorror.cs" />
+    <Compile Include="Horrors\Visual\PeppySansHorror.cs" />
+    <Compile Include="Horrors\Audio\ChoirSuspenseHorror.cs" />
+    <Compile Include="Horrors\Audio\HahahahahaHorror.cs" />
+    <Compile Include="Horrors\Audio\SuspenseHorror.cs" />
+    <Compile Include="Horrors\VisualHorrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horrors\VisualHorrorForm.Designer.cs">
+      <DependentUpon>VisualHorrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StreamCompanionHorrorPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamCompanionHorrorSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StreamCompanionHorrorSettings.Designer.cs">
+      <DependentUpon>StreamCompanionHorrorSettings.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Horrors\VisualHorrorForm.resx">
+      <DependentUpon>VisualHorrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StreamCompanionHorrorSettings.resx">
+      <DependentUpon>StreamCompanionHorrorSettings.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knock.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peppysans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dontForget.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laugh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suspense.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choirSuspense.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dunDunDun.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mgs.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inception.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sadTrombone.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nope.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hahahahaha.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dun.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nalirat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nalian.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\steve.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drphil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\osuClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theManWithNoEyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bsod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bsodAudio.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\momo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scaryLittleGirl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scaryFace.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taserface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happyStick.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenSmash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenCrack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zallius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spookyBTMC.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
